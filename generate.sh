@@ -7,7 +7,7 @@ mvn clean install -DskipTests
 cd ..
 unzip wsdl2rest/dist/target/wsdl2rest-dist-*.zip 
 mv wsdl2rest-*SNAPSHOT wsdl2rest-generator
-sh wsdl2rest-generator/bin/wsdl2rest.sh --out . --wsdl http://localhost:8080/ws/countries.wsdl
+sh wsdl2rest-generator/bin/wsdl2rest.sh --out . --wsdl $1
 cp -Rfv java/* ../src/main/java
 cp -fv camel/wsdl2rest-camel-context.xml ../src/main/resources/applicationContext.xml
 cd ..
